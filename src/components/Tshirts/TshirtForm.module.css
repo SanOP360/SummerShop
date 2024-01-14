@@ -1,0 +1,42 @@
+.form{
+    display: flex;
+    align-items: center;
+    
+}
+
+.addBtn{
+    color:white;
+    background-color: brown;
+    width:4rem;
+    padding:5px;
+    border:1px solid black;
+    border-radius: 12px;
+    margin:0.2rem;
+}
+
+.addBtn:hover{
+    color:aliceblue;
+    background-color: rgb(122, 32, 32);
+    cursor: pointer;
+}
+
+@media (max-width:600px){
+    .form{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .align{
+        display:flex;
+    
+    }
+    .addBtn{
+        margin:0;
+        align-items: center;
+        font-size: 0.8rem;
+        padding:0;
+        width:3rem;
+    }
+    
+
+}
+

@@ -6,10 +6,12 @@ import CartContext from "../../store/CartContext";
 const Cart = (props) => {
   const cartCtx = useContext(CartContext);
 
+
   const itemRemoveHandler = (item) => {
     cartCtx.removeItem(item); 
   };
 
+  
   const cartItems = (
     <ul className={classes["cart-item"]}>
       {cartCtx.items.map((item) => (
@@ -49,3 +51,8 @@ const Cart = (props) => {
 };
 
 export default Cart;
+
+
+
+
+

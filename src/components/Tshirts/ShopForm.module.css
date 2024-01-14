@@ -1,0 +1,99 @@
+.form {
+  width: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.label {
+  margin-left: 2%;
+}
+.quantity {
+  margin-left: 3%;
+  margin-right: 1%;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.textInput {
+  width: 10%;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.numberInput {
+  width: 6%;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.Addbtn {
+  width: auto;
+  background-color: rgb(49, 49, 192);
+  box-shadow: 0 3px 5px rgb(89, 88, 88, 45);
+  margin-left: 2rem;
+  height: auto;
+  font-size: 1.2rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.Addbtn:hover {
+  color: rgb(221, 218, 218);
+  background-color: blue;
+}
+.errorParagraph {
+  color: white;
+  background-color: red;
+  text-align: center;
+  margin: 0;
+  border: 1px soild black;
+}
+
+@media (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+  .label {
+    margin-left: 2%;
+  }
+  .quantity {
+    margin-left: 3%;
+    margin-right: 1%;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .textInput {
+    width: 100%;
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  .numberInput {
+    width: 50%;
+    padding: 8px;
+    font-weight: bold;
+  }
+
+  .Addbtn {
+    width: auto;
+    background-color: rgb(49, 49, 192);
+    box-shadow: 0 3px 5px rgb(89, 88, 88, 45);
+    margin-left: 2rem;
+    margin-top:1rem;
+    height: auto;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .Addbtn:hover {
+    color: rgb(221, 218, 218);
+    background-color: blue;
+  }
+}

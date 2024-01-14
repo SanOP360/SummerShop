@@ -1,0 +1,73 @@
+.tshirts {
+  width: 80%;
+  margin: 2rem auto;
+  border-radius: 13px;
+  color: white;
+}
+
+.tshirtList {
+  display: flex;
+  padding: 2rem;
+  border-bottom: 1px solid black;
+  width: 100%;
+  background-color: white;
+  justify-content: space-between;
+  
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+.tshirtName {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: black;
+  margin: 0.2rem;
+}
+
+.tshirtDesc {
+  font-style: italic;
+  font-size: 1rem;
+  color: rgb(15, 15, 15);
+  margin: 0.2rem;
+}
+
+.tshirtPrice {
+  color: brown;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.2rem;
+}
+.tshirtQuant{
+  display: flex;
+  align-items: center;
+
+}
+.SizeQuant{
+  color:blue;
+  font-weight: bold;
+  margin:0 5px;
+  width:auto;
+}
+
+@media (max-width:800px){
+  .tshirts{
+    width: 100%;
+    align-items: center;
+  }
+
+  .tshirtList{
+    align-items: center;
+  }
+  .SizeQuant{
+    font-size: 0.9rem;
+  }
+  
+}
+
+@media(max-width:450px){
+       .tshirtQuant{
+    flex-direction: column;
+  } 
+}
