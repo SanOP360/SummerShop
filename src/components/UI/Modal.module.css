@@ -3,10 +3,9 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 20;
   background-color: rgba(0, 0, 0, 0.75);
-  
 }
 
 .modal {
@@ -26,7 +25,20 @@
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+
+  .modal{
+   top: 5%; 
+  left: 20%; 
+    width:59%
+  }
+
+  .content{
+    width: 100%;
+  }
+}
+
+@media (max-width:600px){
 
   .modal{
     top:4%;
@@ -38,3 +50,4 @@
     width: 100%;
   }
 }
+

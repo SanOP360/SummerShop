@@ -3,7 +3,7 @@ import Header from "./components/Layout/Header";
 import Shops from "./components/Tshirts/shops";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
-import { TshirtProvider } from "./store/TshirtContext"; // Import TshirtProvider
+import { TshirtProvider } from "./store/TshirtContext"; 
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,9 +18,7 @@ function App() {
 
   return (
     <CartProvider>
-      <TshirtProvider>
-        {" "}
-        {/* Wrap your components with TshirtProvider */}
+      <TshirtProvider>        
         {isVisible && <Cart onClose={hideCartHandler} />}
         <Header onShowCart={showCartHandler} />
         <main>
@@ -32,3 +30,4 @@ function App() {
 }
 
 export default App;
+

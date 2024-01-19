@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const TshirtContext = createContext();
 
@@ -6,31 +7,36 @@ export const TshirtProvider = ({ children }) => {
   const [tshirts, setTshirts] = useState([]);
 
   const addTshirt = (tshirt) => {
-    setTshirts((prevTshirts) => [...prevTshirts, tshirt]);
+    const newTshirt={...tshirt, id:uuidv4()};
+    setTshirts((prevTshirts) => [...prevTshirts, newTshirt]);
+    console.log(newTshirt.id)
   };
 
   const updateTshirtAvailability = (id, size, quantity) => {
-    let selectedTshirtIndex = tshirts.findIndex((item) => item.id === id);
-    if (selectedTshirtIndex !== -1) {
-      let selectedTshirtData = tshirts[selectedTshirtIndex];
-      selectedTshirtData.sizes[size] =
-        selectedTshirtData.sizes[size] - quantity;
-      setTshirts((prevTshirtArray) => {
-        let newTshirtArray = [...prevTshirtArray];
-        newTshirtArray[selectedTshirtIndex] = selectedTshirtData;
-        return newTshirtArray;
+    setTshirts((prevTshirtArr) => {
+      return prevTshirtArr.map((tshirt) => {
+        return tshirt.id === id
+          ? {
+              ...tshirt,
+              sizes: {
+                ...tshirt.sizes,
+                [size]: tshirt.sizes[size] - quantity,
+              },
+            }
+          : tshirt;
       });
-    }
+    });
   };
 
-  const tshirtContextValue = {
+    
+
+  
+  return (
+    <TshirtContext.Provider value={{
     tshirts,
     addTshirt,
     updateTshirtAvailability,
-  };
-
-  return (
-    <TshirtContext.Provider value={tshirtContextValue}>
+  }}>
       {children}
     </TshirtContext.Provider>
   );

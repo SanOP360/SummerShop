@@ -5,7 +5,6 @@ import CartContext from "../../store/CartContext";
 
 import TshirtContext from "../../store/TshirtContext";
 
-
 const TshirtAddForm = (props) => {
   const cartCtx = useContext(CartContext);
   const TshirtCtx=useContext(TshirtContext);
@@ -50,7 +49,6 @@ const TshirtAddForm = (props) => {
         props.id,size,selectedQuantity
       )
     }
-
   };
 
   return (

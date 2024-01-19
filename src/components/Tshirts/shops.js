@@ -6,7 +6,6 @@ const Shops=()=>{
     return(
 
         <Fragment>
-
             <ShopForm/>
             <AvailableMeals/>
         </Fragment>

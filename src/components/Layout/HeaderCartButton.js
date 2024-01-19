@@ -14,7 +14,6 @@ const HeaderCartButton=props=>{
 
     quantity = isNaN(quantity) ? 0 : quantity;
     
-
     return <button className={classes.Button} onClick={props.onClick} >
         <span className={classes.icon}>
             <CartIcon></CartIcon>
@@ -24,5 +23,5 @@ const HeaderCartButton=props=>{
     </button>
 
 }
-
+ 
 export default HeaderCartButton

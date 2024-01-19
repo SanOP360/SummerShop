@@ -9,7 +9,7 @@ const AvailableTshirts = () => {
   const tshirtCtx = useContext(TshirtContext);
   const tshirtsList = tshirtCtx.tshirts.map((tshirt) => (
     
-    <Tshirt  data={tshirt}/>
+    <Tshirt key={tshirt.id} data={tshirt}/>
   ));
 
   return (
