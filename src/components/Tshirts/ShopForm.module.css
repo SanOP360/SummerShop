@@ -1,6 +1,7 @@
 .form {
   width: 100%;
   background-color: antiquewhite;
+  
   display: flex;
   align-items: center;
   justify-content: center;

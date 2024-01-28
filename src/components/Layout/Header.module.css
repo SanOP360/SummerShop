@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-between;
     background-color: rgb(130, 45, 24);
+   
+
+
     top:0;
     left:0;
     width: 100%;
@@ -30,5 +33,37 @@
     z-index: 2;
 }
 
+.navbar{
+    /* background-color: aquamarine; */
+    width: 40%;
+
+}
+
+.navList{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
 
 
+}
+
+.item{
+    flex:4;
+    list-style: none;
+}
+
+.item a{
+    color:white;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    
+    
+}
+
+.active{
+    .active{
+     border-bottom:4px solid blue;
+}
+}

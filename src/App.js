@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Header from "./components/Layout/Header";
-import Shops from "./components/Tshirts/shops";
+import { Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
 import { TshirtProvider } from "./store/TshirtContext"; 
+import ShopForm from "./components/Tshirts/ShopForm";
+import AvailableTshirts from "./components/Tshirts/AvailableTshirts";
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,11 +20,14 @@ function App() {
 
   return (
     <CartProvider>
-      <TshirtProvider>        
+      <TshirtProvider>
         {isVisible && <Cart onClose={hideCartHandler} />}
         <Header onShowCart={showCartHandler} />
         <main>
-          <Shops />
+          <Routes>
+            <Route path="/Form" element={<ShopForm />} />
+            <Route path="/Product" element={<AvailableTshirts/>} />
+          </Routes>
         </main>
       </TshirtProvider>
     </CartProvider>

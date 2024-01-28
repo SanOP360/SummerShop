@@ -1,8 +1,10 @@
 import React, { useContext, useState } from "react";
 import classes from "./ShopForm.module.css";
 import TshirtContext from "../../store/TshirtContext";
+import { useNavigate } from "react-router-dom";
 
 const ShopForm = () => {
+  const navigate=useNavigate();
   const Shopctx = useContext(TshirtContext);
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
@@ -62,6 +64,7 @@ const ShopForm = () => {
       },
     };
 
+
     Shopctx.addTshirt(item);
 
     
@@ -72,6 +75,10 @@ const ShopForm = () => {
     setMsize("");
     setLsize("");
     setFormIsValid(true);
+
+    navigate('/Product')
+
+
   };
 
   return (
